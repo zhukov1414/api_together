@@ -1,0 +1,14 @@
+[tool.pytest.ini_options]
+python_paths = ["api_yamdb/"]
+DJANGO_SETTINGS_MODULE = "api_yamdb.settings"
+norecursedirs = ["env/*"]
+addopts = "-vv -p no:cacheprovider"
+testpaths = ["tests/"]
+python_files = ["test_*.py"]
+
+[tool.black]
+line-length = 79
+
+[tool.isort]
+profile = "black"
+src_paths = ["api_yamdb"]
